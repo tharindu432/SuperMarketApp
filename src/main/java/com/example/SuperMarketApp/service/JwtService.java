@@ -3,6 +3,7 @@ import com.example.SuperMarketApp.dao.UserDao;
 import com.example.SuperMarketApp.entity.JwtRequest;
 import com.example.SuperMarketApp.entity.JwtResponse;
 import com.example.SuperMarketApp.entity.User;
+import com.example.SuperMarketApp.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
