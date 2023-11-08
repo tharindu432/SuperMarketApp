@@ -65,4 +65,12 @@ public class Product {
     public void setProductActualPrice(Double productActualPrice) {
         this.productActualPrice = productActualPrice;
     }
+
+    public Set<ImageModel> getProductImages() {
+        return productImages;
+    }
+
+    public void setProductImages(Set<ImageModel> productImages) {
+        this.productImages = productImages;
+    }
 }
