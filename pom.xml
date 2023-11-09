@@ -8,11 +8,11 @@
         <version>2.4.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.youtube</groupId>
-    <artifactId>jwt</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>SuperMarketApp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>jwt-youtube</name>
-    <description>Demo project to understand JWT token + role based authentication</description>
+    <name>SuperMarketApp</name>
+    <description>SuperMarketApplication</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>

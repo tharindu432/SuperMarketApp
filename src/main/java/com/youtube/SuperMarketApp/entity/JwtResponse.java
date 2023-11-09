@@ -1,4 +1,4 @@
-package com.youtube.jwt.entity;
+package com.youtube.SuperMarketApp.entity;
 
 public class JwtResponse {
 

@@ -1,13 +1,14 @@
-package com.youtube.jwt;
+package com.youtube.SuperMarketApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JwtYoutubeApplication {
+public class SuperMarketApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(JwtYoutubeApplication.class, args);
+        SpringApplication.run(SuperMarketApp.class, args);
+        System.out.println("SuperMarketApp is running...");
     }
 
 }

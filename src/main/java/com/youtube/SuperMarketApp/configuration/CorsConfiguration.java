@@ -1,4 +1,4 @@
-package com.youtube.jwt.configuration;
+package com.youtube.SuperMarketApp.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

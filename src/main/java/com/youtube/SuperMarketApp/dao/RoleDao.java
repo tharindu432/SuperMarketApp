@@ -1,6 +1,6 @@
-package com.youtube.jwt.dao;
+package com.youtube.SuperMarketApp.dao;
 
-import com.youtube.jwt.entity.Role;
+import com.youtube.SuperMarketApp.entity.Role;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

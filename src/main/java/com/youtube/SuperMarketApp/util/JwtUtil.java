@@ -1,4 +1,4 @@
-package com.youtube.jwt.util;
+package com.youtube.SuperMarketApp.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
