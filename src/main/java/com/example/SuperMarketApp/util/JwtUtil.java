@@ -1,6 +1,5 @@
 package com.example.SuperMarketApp.util;
 
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -15,7 +14,7 @@ import java.util.function.Function;
 @Component
 public class JwtUtil {
 
-    private static final String SECRET_KEY = "Super Market website Development";
+    private static final String SECRET_KEY = "learn_programming_yourself";
 
     private static final int TOKEN_VALIDITY = 3600 * 5;
 

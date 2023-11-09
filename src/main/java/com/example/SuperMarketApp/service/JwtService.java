@@ -1,4 +1,6 @@
 package com.example.SuperMarketApp.service;
+
+
 import com.example.SuperMarketApp.dao.UserDao;
 import com.example.SuperMarketApp.entity.JwtRequest;
 import com.example.SuperMarketApp.entity.JwtResponse;
@@ -75,4 +77,3 @@ public class JwtService implements UserDetailsService {
         }
     }
 }
-

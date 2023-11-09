@@ -1,10 +1,10 @@
 package com.example.SuperMarketApp.controller;
 
-import com.example.SuperMarketApp.entity.User;
-import com.example.SuperMarketApp.service.RoleService;
-import com.example.SuperMarketApp.service.UserService;
 
+import com.example.SuperMarketApp.entity.User;
+import com.example.SuperMarketApp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,34 +14,29 @@ import javax.annotation.PostConstruct;
 
 @RestController
 public class UserController {
+
     @Autowired
-    private final UserService userService;
+    private UserService userService;
 
     @PostConstruct
-   public void initRolesAndUser(){
-    userService.initRolesAndUser();
-   }
-    public UserController(UserService userService) {
-        this.userService = userService;
+    public void initRoleAndUser() {
+        userService.initRoleAndUser();
     }
 
-
-
-    @PostMapping({"registerNewUser"})
-    public User registerNewUser(@RequestBody User user){
-      return   userService.registerNewUser(user);
-
+    @PostMapping({"/registerNewUser"})
+    public User registerNewUser(@RequestBody User user) {
+        return userService.registerNewUser(user);
     }
 
     @GetMapping({"/forAdmin"})
+    @PreAuthorize("hasRole('Admin')")
     public String forAdmin(){
-        return "this url is only accessible to admin";
+        return "This URL is only accessible to the admin";
     }
 
     @GetMapping({"/forUser"})
+    @PreAuthorize("hasRole('User')")
     public String forUser(){
-        return "this url is only accessible to users";
+        return "This URL is only accessible to the user";
     }
-
-
 }

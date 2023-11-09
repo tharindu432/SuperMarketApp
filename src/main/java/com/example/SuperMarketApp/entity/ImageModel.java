@@ -1,5 +1,6 @@
 package com.example.SuperMarketApp.entity;
 
+
 import javax.persistence.*;
 
 @Entity
@@ -56,3 +57,5 @@ public class ImageModel {
         this.picByte = picByte;
     }
 }
+
+

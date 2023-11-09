@@ -1,5 +1,6 @@
 package com.example.SuperMarketApp.entity;
 
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -16,12 +17,12 @@ public class Product {
 
     @ManyToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinTable(name="product_images",
-    joinColumns = {
-            @JoinColumn(name = "product_id"),
+            joinColumns = {
+                    @JoinColumn(name = "product_id"),
 
-    },
+            },
             inverseJoinColumns = {
-            @JoinColumn(name = "image_id")
+                    @JoinColumn(name = "image_id")
             }
     )
     private Set<ImageModel> productImages;

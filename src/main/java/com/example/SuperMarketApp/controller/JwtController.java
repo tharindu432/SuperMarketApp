@@ -1,5 +1,6 @@
 package com.example.SuperMarketApp.controller;
 
+
 import com.example.SuperMarketApp.entity.JwtRequest;
 import com.example.SuperMarketApp.entity.JwtResponse;
 import com.example.SuperMarketApp.service.JwtService;
@@ -21,4 +22,3 @@ public class JwtController {
         return jwtService.createJwtToken(jwtRequest);
     }
 }
-

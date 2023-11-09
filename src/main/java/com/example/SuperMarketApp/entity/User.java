@@ -1,6 +1,5 @@
 package com.example.SuperMarketApp.entity;
 
-
 import javax.persistence.*;
 import java.util.Set;
 
