@@ -30,6 +30,10 @@ public class OrderDetail {
         this.user = user;
     }
 
+    public OrderDetail() {
+
+    }
+
     public Product getProduct() {
         return product;
     }
