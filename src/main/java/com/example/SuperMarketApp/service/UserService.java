@@ -57,6 +57,7 @@ public class UserService {
         userDao.save(user);
     }
 
+
     public User registerNewUser(User user){
        Role role= roleDao.findById("User").get();
        Set<Role> roleSet=new HashSet<>();
