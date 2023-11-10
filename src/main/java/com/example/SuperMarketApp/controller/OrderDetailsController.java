@@ -36,4 +36,11 @@ public class OrderDetailsController {
         return orderDetailService.getAllOrderDetails();
 
     }
+
+
+    @GetMapping({"/markOrderAsDelivered/{orderId}"})
+    public void markOrderAsDelivered(@PathVariable(name = "productId")Integer orderId){
+
+        orderDetailService.markOrderAsDelivered(orderId);
+    }
 }

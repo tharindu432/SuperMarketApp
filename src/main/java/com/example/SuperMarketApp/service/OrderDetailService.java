@@ -6,6 +6,7 @@ import com.example.SuperMarketApp.dao.OrderDetailDao;
 import com.example.SuperMarketApp.dao.ProductDao;
 import com.example.SuperMarketApp.dao.UserDao;
 import com.example.SuperMarketApp.entity.*;
+import jdk.javadoc.internal.doclets.formats.html.PackageUseWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -75,5 +76,14 @@ public class OrderDetailService {
             orderDetailDao.save(orderDetail);
         }
 
+    }
+
+    public void markOrderAsDelivered(Integer orderId){
+       OrderDetail orderDetail= orderDetailDao.findById(orderId).get();
+
+       if(orderDetail !=null){
+           orderDetail.setOrderStatus("Delivered");
+           orderDetailDao.save(orderDetail);
+       }
     }
 }
