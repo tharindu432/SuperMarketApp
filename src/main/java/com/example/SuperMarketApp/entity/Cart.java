@@ -20,6 +20,10 @@ public class Cart {
         this.user = user;
     }
 
+    public Cart(){
+
+    }
+
     public Integer getCartId() {
         return cartId;
     }

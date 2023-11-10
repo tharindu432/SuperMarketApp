@@ -11,6 +11,8 @@ import org.hibernate.procedure.spi.ParameterRegistrationImplementor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CartService {
     @Autowired
@@ -37,5 +39,11 @@ public class CartService {
 
         }
         return null;
+    }
+
+    public List<Cart> getCartDetails(){
+        String username=JwtRequestFilter.CURRENT_USER;
+       User user= userDao.findById(username).get();
+        return cartDao.findByUser(user);
     }
 }
