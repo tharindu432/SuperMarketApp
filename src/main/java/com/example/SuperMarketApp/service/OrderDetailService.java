@@ -1,6 +1,7 @@
 package com.example.SuperMarketApp.service;
 
 import com.example.SuperMarketApp.configuration.JwtRequestFilter;
+import com.example.SuperMarketApp.dao.CartDao;
 import com.example.SuperMarketApp.dao.OrderDetailDao;
 import com.example.SuperMarketApp.dao.ProductDao;
 import com.example.SuperMarketApp.dao.UserDao;
@@ -23,7 +24,10 @@ public class OrderDetailService {
     @Autowired
 
     private UserDao userDao;
-    public  void placeOrder(OrderInput orderInput){
+
+    @Autowired
+    CartDao cartDao;
+    public  void placeOrder(OrderInput orderInput,boolean isSingleProductCheckout){
         List< OrderProductQuantity> productQuantityList=orderInput.getOrderProductQuantityList();
         for(OrderProductQuantity o: productQuantityList){
           Product product= productDao.findById(o.getProductId()).get();
@@ -43,6 +47,13 @@ public class OrderDetailService {
 
 
             );
+            //empty the cart
+            if(!isSingleProductCheckout){
+              List<Cart> carts=  cartDao.findByUser(user);
+              carts.stream().forEach(x -> cartDao.deleteById(x.getCartId()));
+            }
+
+
             orderDetailDao.save(orderDetail);
         }
 
