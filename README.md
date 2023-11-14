@@ -67,6 +67,7 @@ Before starting, make sure you have the following prerequisites:
 
 1. Create a MySQL database for the application.
 2. Open src/main/resources/application.properties and modify the following properties to match your MySQL configuration.
+   
    ```
    spring.datasource.url=jdbc:mysql://localhost:3306/your-database-name
    spring.datasource.username=your-username
