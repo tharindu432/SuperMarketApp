@@ -63,7 +63,7 @@ Before starting, make sure you have the following prerequisites:
    cd SuperMarketApp
    ```
 
-###Configuration 🔧
+### Configuration 🔧
 
 1. Create a MySQL database for the application.
 2. Open src/main/resources/application.properties and modify the following properties to match your MySQL configuration.
@@ -74,34 +74,34 @@ Before starting, make sure you have the following prerequisites:
    spring.datasource.password=your-password
    ```
 
-###Running the Application ▶️
+### Running the Application ▶️
 
 The Supermarket Application will start, and you can access it at http://localhost:8080.
 
-###Usage 📖
+### Usage 📖
 
 Once the application is up and running, you can access the Supermarket Application through a web browser or use API clients like Postman to interact with the RESTful APIs.
 
 The application provides a user-friendly interface for managing products, orders and inventory. Additionally, the APIs can be used to integrate with other systems or build custom front-end applications.
 
 
-###API Documentation 📚
+### API Documentation 📚
 
 The Supermarket Application provides API documentation to help developers understand and utilize the available endpoints. The API documentation is generated using Swagger.
 To access the API documentation, open your web browser and navigate to http://localhost:8080/swagger-ui.html.
 
 
-###Contributing 🤝
+### Contributing 🤝
 
 Contributions to the Supermarket Application are welcome! If you find any bugs, have suggestions for new features, or would like to contribute code improvements, please feel free to open an issue or submit a pull request.
 
 
-###License 📄
+### License 📄
 
 The Supermarket Application is open-source software licensed under the MIT License.
 
 
-## Contact 📞
+### Contact 📞
 
 For any questions or inquiries about the Supermarket Application, please feel free to reach out:
 
